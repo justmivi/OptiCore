@@ -1,0 +1,57 @@
+# OptiCore Configuration
+# Advanced Minecraft Server Optimization Plugin
+# Website: exceed.wtf
+
+# Entity Optimization Settings
+entity-optimization:
+  enabled: true
+  # Maximum entities allowed per chunk before optimization kicks in
+  max-entities-per-chunk: 50
+  # Maximum mobs allowed per chunk
+  max-mobs-per-chunk: 20
+  # Entity tracking range (lower = better performance)
+  tracking-range: 48
+
+# Item Cleanup Settings
+item-cleanup:
+  enabled: true
+  # How often to run item cleanup (in seconds)
+  interval-seconds: 300
+  # Maximum age for items before cleanup (in seconds)
+  max-age-seconds: 600
+
+# Chunk Optimization Settings
+chunk-optimization:
+  enabled: true
+  # Delay before attempting to unload unused chunks (in seconds)
+  unload-delay-seconds: 30
+
+# Redstone Optimization Settings
+redstone-optimization:
+  enabled: true
+  # Delay between redstone updates (in ticks, 1 tick = 50ms)
+  update-delay-ticks: 2
+
+# Mob AI Optimization Settings
+mob-ai-optimization:
+  enabled: true
+
+# Performance Monitoring Settings
+performance-monitoring:
+  enabled: true
+  # TPS threshold below which warnings are issued
+  tps-warning-threshold: 18.0
+
+# Advanced Settings (use with caution)
+advanced:
+  # Enable aggressive optimization during low TPS
+  aggressive-mode-enabled: false
+  # TPS threshold to trigger aggressive mode
+  aggressive-mode-threshold: 15.0
+
+  # Experimental features
+  experimental:
+    # Limit entity pathfinding during low TPS
+    limit-pathfinding: false
+    # Reduce mob spawn rates during high load
+    dynamic-spawn-reduction: false

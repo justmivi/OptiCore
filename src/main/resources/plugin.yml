@@ -1,0 +1,41 @@
+name: OptiCore
+version: '1.0.0'
+main: mivi.dev.optiCore.OptiCore
+api-version: '1.18'
+authors: [ mivi.dev ]
+description: Advanced Minecraft Server Optimization Plugin - Reduce lag, optimize TPS, and improve server performance
+website: exceed.wtf
+softdepend: [ WorldEdit, WorldGuard ]
+
+commands:
+  opticore:
+    description: OptiCore management commands
+    usage: /opticore [reload|status|optimize|entities]
+    permission: opticore.use
+    aliases: [ oc, optimize, serveropt ]
+
+permissions:
+  opticore.*:
+    description: Full access to OptiCore
+    default: op
+    children:
+      opticore.use: true
+      opticore.reload: true
+      opticore.optimize: true
+      opticore.admin: true
+
+  opticore.use:
+    description: Basic OptiCore usage
+    default: true
+
+  opticore.reload:
+    description: Reload OptiCore configuration
+    default: op
+
+  opticore.optimize:
+    description: Run manual optimization
+    default: op
+
+  opticore.admin:
+    description: Access to all admin features
+    default: op
